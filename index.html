@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <style>
+        h1{
+            margin: 50px 350px;
+        }
+        div{
+            background-color: black;
+            border:1px solid black;
+            padding: 20px 50px;
+            width:400px;
+            border-radius: 5px;
+            margin: 0px 250px;
+        }
+        input{
+            width:350px;
+            padding: 5px;
+            position: absolute;
+        }
+        input:hover{
+            background-color:  rgb(231, 227, 227);
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            position: relative;
+            left: 100px;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            background-position-x: white;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Celsius to Fahrenheit </h1>
+    <div><br>
+        <input type="text" id="a" placeholder="Enter temp in celcius"><br><br><br>
+        <input type="text" id="b" placeholder="Temp in Ferenheit"><br><br><br>
+        <button onclick="convert()" id="c">Convert</button>
+    </div>
+    <script>
+        function convert(){
+            var a=document.getElementById("a").value;
+            var r=(a * 9/5) + 32;
+            document.getElementById("b").value=r;
+        }
+    </script>
+</body>
+</html>
